@@ -1,40 +1,42 @@
-/**
- * Created by jc303477 on 16/03/15.
- */
+
+
 public class patient {
+   private String name;
+    private int age;
+    private double height, weight;
 
+    public patient(String name,int age,double height,double weight){
+        this.name=name;
+        this.age=age;
+        this.height=height;
+        this.weight=weight;
+    }
 
-        private String name;
-        private int age;
-        private double height,weight;
-
-        public void setName(String name){
-        this.name =name;
-
+    public String getName() {
+        return name;
+    }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getName(String name){
-        return name;
-
-    }
-
-
-    }
-    public void setAge(int age){
-        this.age =age;
-    }
-    public int getAge(int age){
+    public int getAge() {
         return age;
-
     }
-    setDetails(double height, double weight){
-        return this.weight*(this.height*this.height);
 
-
+    public void setAge(int age) {
+        this.age = age;
     }
+
+    public void setDetails(double height, double weight) {
+        this.weight = weight;
+        this.height = height;
+    }
+
+    public double getBMI() {
+        return weight / Math.pow(height, 2);
+    }
+
+
 }
 
-}

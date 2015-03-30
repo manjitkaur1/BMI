@@ -28,15 +28,26 @@ public class patient {
         this.age = age;
     }
 
-    public void setDetails(double height, double weight) {
-        this.weight = weight;
-        this.height = height;
-    }
+
+
+
+
 
     public double getBMI() {
         return weight / Math.pow(height, 2);
     }
 
 
+    public void setheight(double height)
+    {
+        this.height=height;
+    }
+
+
+    public void setweight(double weight) {
+        this.weight=weight;
+
+    }
 }
+
 

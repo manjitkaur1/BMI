@@ -1,34 +1,28 @@
+import java.util.ArrayList;
 
 public class Patients {
 
-    patient[] records;
-    int current;
+    ArrayList<patient> records;
 
-    public Patients(int maxSize) {
-        records = new patient[maxSize];
-
-    }
-    public int count(){
-        return current;
+    public Patients() {
+        records = new ArrayList<patient>();
     }
 
-
-
-
+    public int count() {
+        return records.size();
+    }
 
     public void add(patient patient) {
 
-        records[current++]=patient;
+        records.add(patient);
     }
 
-    public patient get(int i){
-        return records[i];
+    public patient get(int i) {
+        return records.get(i);
     }
 
-    public boolean isFull() {
-        return (current==records.length);
-    }
+
     public boolean isEmpty() {
-        return (current==0);
+        return records.isEmpty();
     }
 }
